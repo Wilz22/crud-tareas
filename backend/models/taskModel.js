@@ -1,6 +1,7 @@
 const db = require('../config/database');
 
 const Task = {
+    // Obtener todas las tareas
     getAll: async (callback) => {
         try {
             const query = 'SELECT * FROM tareas';
@@ -11,7 +12,7 @@ const Task = {
             callback(error);
         }
     },
-
+    // Obtener la tarea por id haciendo un selec con where
     getById: async (id, callback) => {
         try {
             const query = 'SELECT * FROM tareas WHERE id = ?';
@@ -22,7 +23,7 @@ const Task = {
             callback(error);
         }
     },
-
+    // Crear una tarea haciendo un insert into
     create: async (task, callback) => {
         try {
             const query = 'INSERT INTO tareas (titulo, descripcion, estado) VALUES (?, ?, ?)';
@@ -33,7 +34,7 @@ const Task = {
             callback(error);
         }
     },
-
+    // Actualiza la tarea 
     update: async (task, callback) => {
         console.log('Updating task with data:', task); // Verifica los datos recibidos
         try {
@@ -46,7 +47,7 @@ const Task = {
             callback(error);
         }
     },
-
+    //Elimina la tarea por el id
     delete: async (id, callback) => {
         try {
             const query = 'DELETE FROM tareas WHERE id = ?';

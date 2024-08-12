@@ -4,12 +4,19 @@ Este proyecto es una aplicación de gestión de tareas con un frontend basado en
 
 ## Contenido
 
+- [Link](#link)
 - [Descripción](#descripción)
 - [Instalación](#instalación)
 - [Configuración](#configuración)
 - [Uso](#uso)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 
+
+### Link
+
+Este es el link del repositorio en github:
+
+- https://github.com/Wilz22/crud-tareas
 
 ## Descripción
 
@@ -40,6 +47,7 @@ La aplicación permite a los usuarios gestionar tareas, con funcionalidades para
    cd frontend
 
 2. **Instala las dependencias**:
+    ```bash
     npm install
     npm start
 
@@ -49,7 +57,7 @@ La aplicación permite a los usuarios gestionar tareas, con funcionalidades para
     cd backend
 
 2. Ejecutar el backend:
-
+    ```bash
     node index.js
 
 ### Requisitos
@@ -62,20 +70,22 @@ La aplicación permite a los usuarios gestionar tareas, con funcionalidades para
 ### Configuración
 
 Configuración de Base de Datos
-Edita el archivo backend/config/database.js con tus credenciales de MySQL
+- Edita el archivo backend/config/database.js con tus credenciales de MySQL
 
 e importa el archivo sql de la base de datos tareas_hogar.sql
 
 
 ### Uso
-Crear Tarea: Usa el formulario en el frontend para agregar una nueva tarea.
-Ver Tareas: Se mostrarán todas las tareas existentes en la interfaz.
-Editar Tarea: Haz doble clic en el título de la tarea para editarla.
-Eliminar Tarea: Usa el botón de eliminar en cada tarea.
+
+- Crear Tarea: Usa el formulario en el frontend para agregar una nueva tarea.
+- Ver Tareas: Se mostrarán todas las tareas existentes en la interfaz.
+- Editar Tarea: Haz doble clic en el título de la tarea para editarla.
+- Eliminar Tarea: Usa el botón de eliminar en cada tarea.
 
 ### Estructura del Proyecto
-frontend/: Código fuente del frontend en Stencil.js.
-backend/: Código fuente del backend en Node.js.
-config/: Configuración de la base de datos para el backend.
-models/: Modelos de datos para el backend.
-services/: Servicios para interactuar con la base de datos.
+
+- frontend/: Código fuente del frontend en Stencil.js.
+- backend/: Código fuente del backend en Node.js.
+- config/: Configuración de la base de datos para el backend.
+- models/: Modelos de datos para el backend.
+- services/: Servicios para interactuar con la base de datos.

@@ -15,6 +15,7 @@ export class AppRoot {
                 </aside>
 
                 <main>
+                    {/* importa el compoonente */}
                     <to-do-card-list></to-do-card-list>
                 </main>
             </div>

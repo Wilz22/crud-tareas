@@ -2,15 +2,18 @@ const express = require('express');
 const cors = require('cors');
 const taskRoutes = require('./routes/taskRoutes');
 
+// Crea la aplicación Express
 const app = express();
 
-app.use(express.json());
-app.use(cors());
+// Configura middlewares
+app.use(express.json()); // Para manejar JSON en solicitudes
+app.use(cors()); // Para permitir solicitudes de diferentes dominios
 
-app.use('/api', taskRoutes);
+// Configura rutas
+app.use('/api', taskRoutes); // Rutas para tareas
 
-const PORT = process.env.PORT || 3000;
-
+// Define y arranca el servidor
+const PORT = process.env.PORT || 3000; // Usa el puerto de la variable de entorno o 3000
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`); // Mensaje en consola
 });

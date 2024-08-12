@@ -25,7 +25,7 @@ export class ToDoCardList implements ComponentInterface {
     async componentDidLoad() {
         await this.loadTasks();
     }
-
+//trae las tareas mediante la clase TaskService
     async loadTasks() {
       this.loading = true; // Asegúrate de que se establezca a true al iniciar la carga
       try {
@@ -45,7 +45,7 @@ export class ToDoCardList implements ComponentInterface {
   }
 
 
-
+//llama un evento listen y llama a la funcion de update
   @Listen('updateTodoTask', { capture: true })
   async updateValue(event: CustomEvent<CardDataI>) {
       let updatedTask: CardDataI = event.detail;
@@ -61,12 +61,8 @@ export class ToDoCardList implements ComponentInterface {
           console.error('Error updating task:', error);
       }
   }
-
-
-
-
-
-    @Listen('removeTodoTask', { capture: true })
+//llama un evento listen y llama a la funcion de delete
+  @Listen('removeTodoTask', { capture: true })
     async onRemoveToDoHandler(event: CustomEvent<CardDataI>) {
         try {
             await TaskService.deleteTask(event.detail.id);

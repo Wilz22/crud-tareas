@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
     res.send('API is working!');
 });
 
+//rutas para las apis, para que el front las consuma
 router.get('/tasks', getAllTasks);
 router.get('/tasks/:id', getTaskById);
 router.post('/tasks', createTask);

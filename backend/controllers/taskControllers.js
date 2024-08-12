@@ -1,12 +1,12 @@
 const Task = require('../models/taskModel');
-
+//funcion que trae todas las tareas de la bd
 function getAllTasks(req, res) {
     Task.getAll((err, tasks) => {
         if (err) return res.status(500).json({ message: err.message });
         res.json(tasks);
     });
 }
-
+//funcion que trae la tarea por id
 function getTaskById(req, res) {
     const id = req.params.id;
     Task.getById(id, (err, task) => {
@@ -15,7 +15,7 @@ function getTaskById(req, res) {
         res.json(task);
     });
 }
-
+//funcion que crea la tarea
 function createTask(req, res) {
     const newTask = req.body;
     Task.create(newTask, (err, task) => {
@@ -23,7 +23,7 @@ function createTask(req, res) {
         res.status(201).json(task);  // Se devuelve el nuevo recurso creado
     });
 }
-
+//funcion que actualiza la tarea por id en la bd
 function updateTask(req, res) {
     const id = req.params.id;
     const updatedTask = req.body;
@@ -41,7 +41,7 @@ function updateTask(req, res) {
     });
 }
 
-
+//funcion que elimina la tarea por id en la bd
 function deleteTask(req, res) {
     const id = req.params.id;
     Task.delete(id, (err, result) => {
@@ -50,7 +50,7 @@ function deleteTask(req, res) {
         res.json({ message: 'Task deleted successfully' });
     });
 }
-
+//se exportan los modulos
 module.exports = {
     getAllTasks,
     getTaskById,
