@@ -1,0 +1,36 @@
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgb(0, 0, 0, 0.4);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #f1f1f1;
+    margin: 15px 20px;
+    min-height: 140px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.card-title {
+    display: flex;
+    margin: 5px 10px;
+}
+
+.card-title-txt {
+    display: flex;
+    flex: auto;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.card-body {
+    padding: 10px 15px;
+}
